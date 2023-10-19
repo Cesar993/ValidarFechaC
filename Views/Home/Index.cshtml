@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+<h1>Formulario de Usuario</h1>
+
+<form action="/guardarUsuario" method="POST">
+    <label asp-for="Fecha">Fecha:</label>
+    <input type="date" id="nombre" asp-for="Fecha" required><br><br>
+    <span asp-validation-for="Fecha"></span>
+
+    <label asp-for="Apellido">Apellido:</label>
+    <input type="text" id="apellido" asp-for="Apellido" required><br><br>
+    <span asp-validation-for="Apellido"></span>
+    <input type="submit" value="Guardar">
+</form>
